@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#8c183d">
+    <meta name="description" content="Kejutan kecil penuh cinta untuk hari ulang tahunmu.">
+    <title>Happy Birthday!</title>
+    <link rel="preload" href="Happy-Festive.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="Monday-Birthday.otf" as="font" type="font/otf" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="petals" aria-hidden="true"></div>
+    <main>
+      <section class="stage intro-stage" id="intro-stage" aria-live="polite">
+        <div class="intro-glow"></div>
+        <div class="intro-copy">
+          <p class="eyebrow">a little surprise, just for novi</p>
+          <h1>ada sesuatu<br>buat novi...</h1>
+          <p class="intro-hint">sentuh kadonya, ya ♡</p>
+        </div>
+        <button class="gift-button" id="open-gift" type="button" aria-label="Buka kado ulang tahun">
+          <span class="gift-bow" aria-hidden="true"></span>
+          <span class="gift-lid" aria-hidden="true"></span>
+          <span class="gift-box" aria-hidden="true"></span>
+          <span class="gift-shadow" aria-hidden="true"></span>
+        </button>
+        <div class="calendar-reveal" id="calendar-reveal" hidden>
+          <p class="eyebrow">happy birthday, novi!</p>
+          <div class="calendar-confetti" aria-hidden="true">
+            <span>🎀</span><span>💖</span><span>✨</span><span>🌸</span><span>🧸</span><span>💕</span>
+          </div>
+          <div class="calendar-card">
+            <div class="calendar-top">
+              <span class="calendar-sparkle" aria-hidden="true">✦</span>
+              <p id="calendar-month">NOVEMBER 2026</p>
+              <span class="calendar-sparkle" aria-hidden="true">✦</span>
+            </div>
+            <div class="calendar-weekdays" aria-hidden="true">
+              <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+            </div>
+            <div class="calendar-days" id="calendar-days" aria-label="Kalender bulan November"></div>
+            <div class="calendar-note"><span class="tiny-heart">♥</span> 15 november 2026 <span class="tiny-heart">♥</span></div>
+          </div>
+          <button class="text-button calendar-continue" id="continue-to-memories" type="button">LIHAT KENANGAN <span>↓</span></button>
+          <span class="birthday-cake" aria-label="Kue ulang tahun" role="img">🎂</span>
+        </div>
+        <p class="made-with">from : chris <span>♡</span></p>
+      </section>
+
+      <section class="stage memory-stage" id="memory-stage" hidden>
+        <div class="stage-heading">
+          <p class="eyebrow">FAVORITE PICTURE</p>
+          <h2>and these are some<br>of my favorite pictures <em>from you</em></h2>
+        </div>
+        <div class="memory-string" aria-hidden="true">
+          <svg viewBox="0 0 900 180" preserveAspectRatio="none">
+            <path d="M5 35 C100 95 160 110 275 72 S440 7 545 65 S730 142 895 55"></path>
+          </svg>
+        </div>
+        <div class="memory-grid">
+          <figure class="photo-frame frame-one">
+            <span class="photo-pin" aria-hidden="true"></span>
+            <img alt="Kenangan manis pertama" loading="lazy">
+          </figure>
+          <figure class="photo-frame frame-two">
+            <span class="photo-pin" aria-hidden="true"></span>
+            <img alt="Kenangan manis kedua" loading="lazy">
+          </figure>
+          <figure class="photo-frame frame-three">
+            <span class="photo-pin" aria-hidden="true"></span>
+            <img alt="Kenangan manis ketiga" loading="lazy">
+          </figure>
+        </div>
+        <button class="text-button continue-button" id="continue-story" type="button">NEXT PENCET SINI <span>↓</span></button>
+      </section>
+
+      <section class="stage birthday-stage" id="birthday-stage" hidden>
+        <div class="birthday-heading">
+          <p class="eyebrow">HI NOVI</p>
+          <h2>HAPPY<br><span>BIRTHDAY</span></h2>
+          <div class="heading-divider" aria-hidden="true"><span>✦</span><i></i><span>♡</span><i></i><span>✦</span></div>
+        </div>
+        <article class="letter-card">
+          <div class="letter-decoration" aria-hidden="true">✿</div>
+          <p class="letter-label">FROM : CHRIS</p>
+          <h3 id="recipient-name"></h3>
+          <p class="typed-message" aria-live="polite"><span class="message-measure" id="message-measure" aria-hidden="true"></span><span id="typed-content"><span class="typing-cursor" id="typing-cursor" aria-hidden="true"></span></span></p>
+          <div class="letter-signoff" id="letter-signoff" hidden>i love you novi <span>♡</span></div>
+        </article>
+        <section class="music-card" aria-label="Pemutar lagu ulang tahun">
+          <div class="album-art">
+            <img id="album-cover" src="diaf.jpg" alt="Sampul lagu">
+            <span class="vinyl" aria-hidden="true"></span>
+          </div>
+          <div class="music-details">
+            <p class="eyebrow">a song for your day</p>
+            <h3 id="song-title">Lagu untukmu</h3>
+            <p class="song-artist" id="song-artist">putar dan nikmati harimu</p>
+            <div class="progress-row">
+              <span id="current-time">0:00</span>
+              <input id="song-progress" type="range" min="0" max="0" value="0" step="1" aria-label="Posisi lagu" disabled>
+              <span id="duration">0:00</span>
+            </div>
+            <div class="music-actions">
+              <button class="play-button" id="play-song" type="button" aria-label="Putar lagu" disabled>
+                <span id="play-icon" aria-hidden="true">▶</span>
+              </button>
+              <p class="music-status" id="music-status" role="status">PLAY SONG</p>
+            </div>
+          </div>
+          <audio id="birthday-song" preload="none"></audio>
+        </section>
+        <footer class="page-footer">CHRIS OFFICIAL STUDIO <span>♡</span></footer>
+      </section>
+    </main>
+  </body>
+</html>
