@@ -277,6 +277,7 @@
   giftButton.addEventListener("click", () => {
     if (giftButton.disabled) return;
     giftButton.disabled = true;
+    playConfiguredSong();
     giftButton.classList.add("is-open");
     window.setTimeout(() => {
       giftButton.hidden = true;
