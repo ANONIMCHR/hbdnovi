@@ -304,7 +304,6 @@
   }
 
   playButton.addEventListener("click", () => {
-    if (!audio.src) return;
     if (audio.paused) {
       playConfiguredSong();
     } else {
